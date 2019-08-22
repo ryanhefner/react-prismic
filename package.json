@@ -1,5 +1,5 @@
 {
-  "name": "react-prismic",
+  "name": "@ryanhefner/react-prismic",
   "version": "0.1.0",
   "description": "Easily compose Prismic requests and data into your React applications.",
   "repository": "ryanhefner/react-prismic",
