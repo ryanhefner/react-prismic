@@ -9,7 +9,7 @@ class PrismicQuery extends Component {
   constructor(props) {
     super(props);
 
-    const data = props.prismic.client.checkCache(props);
+    const data = this.checkCache(props);
 
     this.state = {
       fetched: data ? true : false,
