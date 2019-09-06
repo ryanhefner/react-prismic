@@ -54,7 +54,7 @@ each.
 
 * `client: PrismicClient` -
 
-* `renderPromises: RenderPromises` - Used by [`next-prismic`](https://github.com/ryanhefner/next-prismic) for requesting and rendering requests during server-side rendering.
+* `renderPromises: RenderPromises` - Passed in via [`next-prismic`](https://github.com/ryanhefner/next-prismic) for requesting and rendering requests during server-side rendering.
 
 
 #### Example

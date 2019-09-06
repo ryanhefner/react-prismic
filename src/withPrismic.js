@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import hoistStatics from 'hoist-non-react-statics';
+import { getDisplayName } from 'react-hoc-helpers';
 
-import { getDisplayName } from './hoc-utils';
 import PrismicContext from './PrismicContext';
 
 /**

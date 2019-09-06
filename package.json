@@ -25,14 +25,11 @@
     "src",
     "types",
     "umd",
-    "getDataFromTree.js",
-    "hoc-utils.js",
     "index.js",
     "PrismicClient.js",
     "PrismicContext.js",
     "PrismicProvider.js",
     "PrismicQuery.js",
-    "RenderPromises.js",
     "withPrismic.js"
   ],
   "directories": {
@@ -43,7 +40,7 @@
   "jsnext:main": "src/index.js",
   "types": "types",
   "scripts": {
-    "clean": "rm -f index.js && rm -f PrismicClient.js && rm -f PrismicContext.js && rm -f PrismicProvider.js && rm -f getDataFromTree.js && rm -f hoc-utils.js && rm -f PrismicQuery.js && rm -f RenderPromises.js && rm -f withPrismic.js && rm -rf es && rm -rf umd",
+    "clean": "rm -f index.js && rm -f PrismicClient.js && rm -f PrismicContext.js && rm -f PrismicProvider.js && rm -f PrismicQuery.js && rm -f withPrismic.js && rm -rf es && rm -rf umd",
     "prebuild": "npm run clean",
     "build": "node ./tools/build.js",
     "watch": "babel ./src -d . --ignore __mocks__,__tests__,**/*.test.js --watch",
@@ -65,6 +62,7 @@
     "hoist-non-react-statics": "^3.3.0",
     "prismic-javascript": "^2.1.1",
     "prop-types": "^15.7.2",
+    "react-hoc-helpers": "^0.1.0",
     "warning": "^4.0.3"
   },
   "devDependencies": {
