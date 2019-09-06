@@ -48,7 +48,7 @@
     "prepublishOnly": "node ./tools/build.js",
     "push-release": "git push origin master && git push --tags",
     "dtslint": "dtslint types",
-    "test": "jest"
+    "test": "jest --findRelatedTests src/index.js"
   },
   "peerDependencies": {
     "react": ">=16.3",
@@ -62,7 +62,7 @@
     "hoist-non-react-statics": "^3.3.0",
     "prismic-javascript": "^2.1.1",
     "prop-types": "^15.7.2",
-    "react-hoc-helpers": "^0.1.0",
+    "react-hoc-helpers": "^0.1.1",
     "warning": "^4.0.3"
   },
   "devDependencies": {
@@ -77,25 +77,25 @@
     "babel-plugin-dev-expression": "^0.2.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "coveralls": "^3.0.6",
-    "dtslint": "^0.9.1",
+    "dtslint": "^0.9.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "gzip-size": "^5.1.1",
-    "jest": "^24.8.0",
-    "jest-enzyme": "^7.1.0",
+    "jest": "^24.9.0",
+    "jest-enzyme": "^7.1.1",
     "jsdom": "^15.1.1",
     "pretty-bytes": "^5.3.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-test-renderer": "^16.9.0",
     "regenerator-runtime": "^0.13.3",
-    "rollup": "^1.19.4",
+    "rollup": "^1.20.3",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-uglify": "^6.0.2",
-    "typescript": "^3.5.3"
+    "rollup-plugin-uglify": "^6.0.3",
+    "typescript": "^3.6.2"
   },
   "jest": {
     "collectCoverage": true,
