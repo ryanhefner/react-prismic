@@ -236,7 +236,7 @@ of the `PrismicClient`
 
 #### Options
 
-* `api: PrismicClient` - Available for the wild ones, the dreamers. Pass in your own Prismic API interface in the event you need to do some low-level shenanigans.
+* `api: PrismicClient` - Available for the wild ones, the dreamers, the mavericks. Pass in your own Prismic API interface in the event you need to do some low-level shenanigans.
 
 * `cache: Cache` - Internally this package uses [`creature-cache`](https://github.com/ryanhefner/creature-cache), but there’s nothing preventing you from using something else, as long as you implement your’s with the same interface.
 
