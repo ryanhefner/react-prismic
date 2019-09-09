@@ -198,7 +198,7 @@ PrismicQuery.propTypes = {
   }),
   getByID: PropTypes.shape({
     id: PropTypes.string,
-    option: PropTypes.object,
+    options: PropTypes.object,
     callback: PropTypes.func,
   }),
   getByIDs: PropTypes.shape({
