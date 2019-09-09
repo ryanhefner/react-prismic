@@ -38,7 +38,11 @@ class PrismicProvider extends Component {
 PrismicProvider.propTypes = {
   api: PropTypes.object,
   children: PropTypes.any,
-  cache: PropTypes.object,
+  cache: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+    PropTypes.string,
+  ]),
   client: PropTypes.object,
   context: PropTypes.object,
   repo: PropTypes.string,
