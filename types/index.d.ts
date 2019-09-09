@@ -26,10 +26,11 @@ export interface AnyContextProps extends ContextProps {
 }
 
 export interface PrismicContext<A extends ContextProps = AnyContextProps> {
+  api?: object;
   cache?: Cache;
-  origin?: string;
-  options?: object;
-  renderPromises?: boolean;
+  client?: PrismicClient;
+  renderPromises?: object;
+  repo?: string;
 }
 
 export class PrismicContext {}
@@ -39,34 +40,13 @@ export class PrismicContext {}
  */
 
 export interface ProviderProps {
-  cache?: Cache;
+  cache?: Cache | Array<any> | string;
   children?: ReactNode;
   context?: PrismicContext;
-  renderPromises?: RenderPromises;
+  renderPromises?: object;
 }
 
 export class PrismicProvider extends Component<ProviderProps, ProviderProps> {}
-
-/**
- * getDataFromTree
- */
-
-export interface defaultInfo {
-  seen: boolean;
-  observerable: null;
-}
-
-export function makeDefaultInfo(): defaultInfo;
-
-export function getDataFromTree(tree: any, context: any): any;
-
-export function getMarkupFromTree(tree: any, context: any, renderFunction: () => void): Promise<any>;
-
-/**
- * hoc-utils
- */
-
-export function getDisplayName(WrappedComponent: Component): string;
 
 /**
  * PrismicQuery
@@ -82,41 +62,51 @@ export interface PrismicQueryState {
 }
 
 export interface PrismicQueryProps {
-  url: string;
-  options?: any;
+  currentExperiment: boolean;
+  everything: boolean;
+  form: {
+    id: string;
+  };
+  getBookmark: {
+    bookmark: string;
+    options?: any;
+    callback?: () => void;
+  };
+  getByID: {
+    id: string;
+    options?: any;
+    callback?: () => void;
+  };
+  getSingle: {
+    type: string;
+    options?: any;
+    callback?: () => void;
+  };
+  master: boolean;
+  previewSession: {
+    token: string;
+    linkResolver?: () => void;
+    defaultUrl?: string;
+    callback?: () => void;
+  };
+  query: {
+    query: string;
+    options?: any;
+    callback?: () => void;
+  };
+  queryFirst: {
+    query: string;
+    options?: any;
+    callback?: () => void;
+  };
   parser?: ParserHandler;
   skip?: boolean;
-  ignoreContextOptions?: boolean;
   onError?: (state: PrismicQueryState) => void;
   onLoad?: (state: PrismicQueryState) => void;
   onRequest?: (state: PrismicQueryState) => void;
 }
 
-export class RequestBlock extends Component<PrismicQueryProps, PrismicQueryState> {}
-
-/**
- * RenderPromises
- */
-
-export interface RequestBlockInfo {
-  seen: boolean;
-  observable: Promise<any> | null;
-}
-
-export interface RequestBlockMap {
-  [key: string]: any;
-}
-
-export class RenderPromises {
-  renderPromises: RequestBlockMap;
-  infoTrie: RequestBlockMap;
-  registerSSRObservable(instance: Component, observable: Promise<any>): void;
-  getSSRObservable(instance: Component): Promise<any>;
-  addPromise(instance: Component, finish: () => void): any;
-  hasPromises(): boolean;
-  consumeAndAwait(): Promise<any>;
-  lookupInfo(instance: Component): RequestBlockInfo;
-}
+export class PrismicQuery extends Component<PrismicQueryProps, PrismicQueryState> {}
 
 /**
  * withPrismic
