@@ -17,6 +17,22 @@ export const apiMethods = [
   'prismicRef',
 ];
 
+const apiMethodArgs = {
+  currentExperiment: (args) => [],
+  everything: (args) => [],
+  form: (args) => [args.id],
+  getBookmark: (args) => [args.bookmark, args.options, args.callback],
+  getByID: (args) => [args.id, args.options, args.callback],
+  getByIDs: (args) => [args.ids, args.options, args.callback],
+  getByUID: (args) => [args.type, args.uid, args.options, args.callback],
+  getSingle: (args) => [args.type, args.options, args.callback],
+  master: (args) => [],
+  previewSession: (args) => [args.token, args.linkResolver, args.defaultUrl, args.callback],
+  query: (args) => [args.query, args.options, args.callback],
+  queryFirst: (args) => [args.query, args.options, args.callback],
+  prismicRef: (args) => [args.label],
+};
+
 export default (options) => {
   const {
     api: optionsApi,
@@ -141,9 +157,13 @@ export default (options) => {
       return apiMethods.indexOf(key) !== -1;
     });
 
-    const cacheKey = getCacheKey(method, props[method]);
+    if (!method) {
+      return null;
+    }
 
-    return cache.has(cacheKey) && cache.read(cacheKey);
+    const cacheKey = getCacheKey(method, apiMethodArgs[method](props[method]));
+
+    return cache.has(cacheKey) ? cache.read(cacheKey) : null;
   }
 
   return {
