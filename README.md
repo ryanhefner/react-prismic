@@ -50,9 +50,9 @@ each.
 > hitting your own custom endpoint, it should be assumed that your instance of
 > the Prismic API matches the interface of the original.
 
-* `cache: Cache | iterable` -
+* `client: PrismicClient` - Client that will be used to make requests against Prismic.
 
-* `client: PrismicClient` -
+* `cache: Cache | iterable | string` - Cache instance to initialize the `client` cache with.
 
 * `renderPromises: RenderPromises` - Passed in via [`next-prismic`](https://github.com/ryanhefner/next-prismic) for requesting and rendering requests during server-side rendering.
 
