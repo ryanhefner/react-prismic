@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import warning from 'warning';
-import Cache from 'creature-cache';
 
 import PrismicClient from './PrismicClient';
 import PrismicContext from './PrismicContext';
