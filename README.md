@@ -1,21 +1,24 @@
 # 📰 react-prismic
 
-Easily compose [Prismic](https://prismic.io) requests and data into your React
-applications.
+[![npm](https://img.shields.io/npm/v/@ryanhefner/react-prismic?style=flat-square)](https://www.npmjs.com/package/@ryanhefner/react-prismic)
+[![NPM](https://img.shields.io/npm/l/@ryanhefner/react-prismic?style=flat-square)](https://www.npmjs.com/package/@ryanhefner/react-prismic)
+[![npm](https://img.shields.io/npm/dt/@ryanhefner/react-prismic?style=flat-square)](https://www.npmjs.com/package/@ryanhefner/react-prismic)
+
+Easily compose [Prismic](https://prismic.io) requests and data into your React applications.
 
 
 ## Install
 
-Via [npm](https://npmjs.com/package/react-prismic)
+Via [npm](https://npmjs.com/package/@ryanhefner/react-prismic)
 
 ```sh
-npm install --save react-prismic
+npm install --save @ryanhefner/react-prismic
 ```
 
-Via [Yarn](https://yarn.fyi/react-prismic)
+Via [Yarn](https://yarn.pm/@ryanhefner/react-prismic)
 
 ```sh
-yarn add react-prismic
+yarn add @ryanhefner/react-prismic
 ```
 
 
@@ -258,7 +261,7 @@ const prismicClient = new PrismicClient({
 
 ## Using Next.js?
 
-If you like what you see above, you might like [next-prismic](https://github.com/ryanhefner/next-prismic),
+If you like what you see above, you might like [@ryanhefner/next-prismic](https://github.com/ryanhefner/next-prismic),
 which lets you easily add `react-prismic` to your Next.js app, making it easy
 to ensure that all your `PrismicQuery` instances render awesomely server-side.
 
