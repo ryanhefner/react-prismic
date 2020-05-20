@@ -9,6 +9,10 @@
     "url": "https://github.com/ryanhefner/react-prismic/issues"
   },
   "homepage": "https://github.com/ryanhefner/react-prismic#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ryanhefner"
+  },
   "keywords": [
     "prismic",
     "prismic-javascript",
